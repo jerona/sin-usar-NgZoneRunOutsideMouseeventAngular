@@ -1,0 +1,12 @@
+* { 
+  background-color: white; 
+  width: 90%; 
+  margin: auto; 
+  text-align: center; 
+  text-align: center
+} 
+
+button  {
+  margin: 10px auto;
+  display: block;
+}

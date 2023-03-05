@@ -1,0 +1,33 @@
+<div (mousemove)="actionEventMouseMove($event)">
+  <!--<div #elementDiv>--> <!-- No usaremos ngZone para el evento mousemove (rendimiento malo)-->
+    <p class="name-component">AppComponent</p>
+    <div>
+      <p>
+      Angular por defecto para cualquier evento activa el mecanismo de detección
+      de cambios.
+      </p>
+      En este ejemplo, estamos lanzando el evento mousemove sin usar el NgZone por lo que
+      veremos que se estara renderizando constantemente, si miramos la consola
+      veremos los mensajes que especifica lo que se ha renderizado y veremos
+      que en este caso los dos componentes 
+      (cuando se lanza un evento en angular se activa el cambio de detección y 
+      actualiza todos los componentes, salvo que se haya indicado lo contrario dependiendo de la estrategía empleada).
+      Por defecto, está la estrategia changeDetectionStrategy.Default, aunque también está la especificada 
+      con el OnPush.
+        Ej (mensaje que indica que se ha renderizando x componente):
+        <ul>
+          <li>$renderizado AppComponent</li>
+          <li>$renderizado HelloComponent</li>
+        </ul>
+      También, pasara lo mismo con los eventos de click en el que se renderizará ambos componentes.
+    </div>
+    <app-hello></app-hello>
+    <div [title]="title">
+      <button (click)="actionEventClick()">
+        Button {{ title }}
+        <!-- app component-->
+      </button>
+    </div>
+  </div>
+  {{ chivatoRender() }}
+  

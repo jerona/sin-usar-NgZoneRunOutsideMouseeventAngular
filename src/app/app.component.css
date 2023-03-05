@@ -1,0 +1,17 @@
+* {
+    font-family: Lato;
+    background-color: #63de63;
+  }
+  
+  .name-component {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  button {
+    margin: 10px auto;
+    display: block;
+    padding: 10px 0px;
+  }
+  
